@@ -27,8 +27,7 @@ alias git graph="git log --all --graph --decorate --oneline"
 alias flush-dns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 alias ta='tmux attach'
 alias dotfiles='sh ~/scripts/dotfiles.sh'
-
-
+alias schoolDir='cd ~/Library/CloudStorage/OneDrive-Menntaský'
 
 HISTFIEL=$HOME/.zhistory
 SAVEHIST=1000

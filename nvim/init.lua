@@ -14,6 +14,7 @@ vim.cmd [[
 
 local opt = vim.opt
 opt.wrap = false
+vim.opt.clipboard = "unnamedplus"
 
 vim.keymap.set('n', '<leader>w', ':NvimTreeFocus<CR>', { desc = 'Focus nvim-tree' })
 
