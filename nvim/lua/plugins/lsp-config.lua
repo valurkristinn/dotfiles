@@ -7,7 +7,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "clangd" },
+				ensure_installed = { "lua_ls", "clangd", "bashls", "eslint", "jdtls", "pyright", "ts_ls" },
 			})
 		end,
 	},
@@ -23,6 +23,11 @@ return {
 			})
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
+				init_options = {
+					fallbackFlags = {
+						"--style={BasedOnStyle: LLVM, KeepEmptyLinesAtTheStartOfBlocks: true, MaxEmptyLinesToKeep: 2, SeparateDefinitionBlocks: Always}",
+					},
+				},
 			})
 			lspconfig.jdtls.setup({
 				capabilities = capabilities,
@@ -31,6 +36,12 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.ts_ls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.bashls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.eslint.setup({
 				capabilities = capabilities,
 			})
 			vim.keymap.set("n", "grd", vim.lsp.buf.definition, {})

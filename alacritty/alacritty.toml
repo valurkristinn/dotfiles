@@ -12,3 +12,5 @@ blur = true
 
 [font]
 normal.family = "Liga SFMono Nerd Font"
+size = 13
+
