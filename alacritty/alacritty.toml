@@ -2,8 +2,8 @@
 TERM = "xterm-256color"
 
 [window]
-padding.x = 10
-padding.y = 10
+padding.x = 15
+padding.y = 15
 
 decorations = "Buttonless"
 
@@ -14,3 +14,5 @@ blur = true
 normal.family = "Liga SFMono Nerd Font"
 size = 13
 
+[cursor]
+style = { shape = "Beam", blinking = "Off" }

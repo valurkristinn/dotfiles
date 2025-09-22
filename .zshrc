@@ -28,6 +28,7 @@ alias flush-dns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 alias ta='tmux attach'
 alias dotfiles='sh ~/scripts/dotfiles.sh'
 alias schoolDir='cd ~/Library/CloudStorage/OneDrive-Menntaský'
+alias updateVaultIndexes='python ~/scripts/update_indexes.py'
 
 HISTFIEL=$HOME/.zhistory
 SAVEHIST=1000
