@@ -9,11 +9,9 @@ return {
     },
     lazy = false,                 
     config = function()
-      vim.keymap.set("n", "<leader>e", "<cmd>Neotree filesystem toggle left<cr>")
-      vim.keymap.set("n", "<leader>w", "<cmd>Neotree filesystem focus left<cr>")
-      vim.keymap.set("n", "<leader>E", "<cmd>Neotree filesystem toggle current<cr>")
-      vim.keymap.set("n", "<leader>b", "<cmd>Neotree buffers toggle float<cr>")
-      vim.keymap.set("n", "<leader>g", "<cmd>Neotree git_status toggle float<cr>")
+      vim.keymap.set("n", "<leader>e", "<cmd>Neotree filesystem toggle current<cr>")
+      vim.keymap.set("n", "<leader>bb", "<cmd>Neotree buffers toggle float<cr>")
+      vim.keymap.set("n", "<leader>gg", "<cmd>Neotree git_status toggle float<cr>")
     end,
   },
 }

@@ -7,8 +7,10 @@ padding.y = 15
 
 decorations = "Buttonless"
 
-opacity = 0.85
-blur = true
+[colors.primary]
+background = "#151515"
+# opacity = 0.85
+# blur = true
 
 [font]
 normal.family = "Liga SFMono Nerd Font"
@@ -16,3 +18,6 @@ size = 13
 
 [cursor]
 style = { shape = "Beam", blinking = "Off" }
+
+[mouse]
+hide_when_typing = true
