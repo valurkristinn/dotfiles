@@ -20,3 +20,6 @@ vim.opt.signcolumn = "yes:2"
 vim.keymap.set("n", "Y", "y$", { desc = "yank to end of line" })
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "next buffer" })
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "previous buffer" })
+vim.keymap.set("n", "<leader>bc", ":bunload<CR>", {desc = "unload buffer"})
+vim.keymap.set("n", "<leader>w", ":w<CR>", {desc = "write"})
+vim.keymap.set("n", "<leader>q", ":q<CR>", {desc = "quit"})
