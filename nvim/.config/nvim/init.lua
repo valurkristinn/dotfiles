@@ -24,6 +24,9 @@ vim.keymap.set("n", "<leader>bc", ":bunload<CR>", { desc = "unload buffer" })
 vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "write" })
 vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "quit" })
 
+-- auto-session
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
 -- start screen
 vim.api.nvim_create_autocmd("BufEnter", {
 	callback = function()

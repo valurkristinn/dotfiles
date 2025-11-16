@@ -1,22 +1,3 @@
-# export PATH="/Users/valur/.opam/default/bin:/Users/valur/.pyenv/shims:/Users/valur/.pyenv/bin:/Users/valur/.nvm/versions/node/v22.12.0/bin:/Users/valur/Library/Python/3.9/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Library/TeX/texbin:/Applications/VMware Fusion.app/Contents/Public:/Users/valur/.opam/default/bin:/Users/valur/.pyenv/bin:/Users/valur/.nvm/versions/node/v22.12.0/bin:/Users/valur/Library/Python/3.9/bin:/Users/valur/.local/bin:/Users/valur/.local/bin:/Users/valur/.local/bin"
-# export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-# export PATH="/Users/valur/Library/Python/3.9/bin:$PATH"
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# export CLASSPATH=$CLASSPATH:.:~/algs4/algs4.jar
-# export CLASSPATH=$CLASSPATH:.:~/jdbc/sqlite-jdbc-3.43.0.0.jar
-# export PATH="$PATH:/Users/valur/.local/bin"
-# export PATH="$HOME/.pyenv/bin:$PATH"
-# export PYENV_ROOT="$HOME/.pyenv"
-# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-#
-#
-# NEWLINE=$'\n'
-# export PROMPT="%n %~ %{$(tput setaf 6)%}${NEWLINE}%# %{$(tput setaf 255)%}"
-#
-# export PATH="/Users/valur/.ghcup/ghc/9.6.7/bin:$PATH"
-
 # System paths first
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/System/Cryptexes/App/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
 
@@ -50,7 +31,7 @@ export CLASSPATH=".:$HOME/algs4/algs4.jar:$HOME/jdbc/sqlite-jdbc-3.43.0.0.jar"
 
 # Prompt
 NEWLINE=$'\n'
-export PROMPT="%n %~ %{$(tput setaf 6)%}${NEWLINE}%# %{$(tput setaf 255)%}"
+export PROMPT="%~ %{$(tput setaf 6)%}${NEWLINE}%# %{$(tput setaf 255)%}"
 
 
 eval "$(pyenv init -)"
@@ -62,8 +43,7 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 
 
-alias nvim="/Users/valur/nvim-macos-arm64/bin/nvim"
-alias git graph="git log --all --graph --decorate --oneline"
+alias git-graph="git log --all --graph --decorate --oneline"
 alias flush-dns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 alias ta='tmux attach'
 alias dotfiles='sh ~/scripts/dotfiles.sh'
@@ -71,9 +51,12 @@ alias schoolDir='cd ~/Library/CloudStorage/OneDrive-Menntaský'
 alias morpho='java -jar ../morpho.jar '
 alias ls='eza --icons'
 
+
+
 HISTFIEL=$HOME/.zhistory
 SAVEHIST=1000
 HISTSIZE=999
+
 setopt share_history
 setopt hist_expire_dups_first
 setopt hist_ignore_dups
