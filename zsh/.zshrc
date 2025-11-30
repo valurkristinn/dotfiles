@@ -31,7 +31,7 @@ export CLASSPATH=".:$HOME/algs4/algs4.jar:$HOME/jdbc/sqlite-jdbc-3.43.0.0.jar"
 
 # Prompt
 NEWLINE=$'\n'
-export PROMPT="%~ %{$(tput setaf 6)%}${NEWLINE}%# %{$(tput setaf 255)%}"
+export PROMPT="%~ %{$(tput setaf 6)%}${NEWLINE}$ %{$(tput setaf 255)%}"
 
 
 eval "$(pyenv init -)"
