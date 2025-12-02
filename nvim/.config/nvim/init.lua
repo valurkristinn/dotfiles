@@ -4,7 +4,6 @@ vim.cmd([[
   set tabstop=4
   set shiftwidth=4
   set expandtab
-  set number
   set number relativenumber
   set cursorline
   set cursorlineopt=number
@@ -32,9 +31,10 @@ vim.api.nvim_create_autocmd("BufEnter", {
 	callback = function()
 		if vim.api.nvim_buf_get_name(0) == "" and vim.bo.buftype == "" then
 			vim.keymap.set("n", "u", ":Lazy update<CR>", { buffer = true })
+			vim.keymap.set("n", "e", ":Neotree filesystem toggle current<cr>", { buffer = true })
 			vim.keymap.set("n", "f", function()
-        require('telescope.builtin').find_files()
-      end, { buffer = true })
+				require("telescope.builtin").find_files()
+			end, { buffer = true })
 		end
 	end,
 })

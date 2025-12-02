@@ -48,10 +48,12 @@ alias flush-dns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 alias ta='tmux attach'
 alias dotfiles='sh ~/scripts/dotfiles.sh'
 alias schoolDir='cd ~/Library/CloudStorage/OneDrive-Menntaský'
-alias morpho='java -jar ../morpho.jar '
 alias ls='eza --icons'
+alias of='open .'
 
-
+mkcd() {
+    mkdir "$1" && cd "$1"
+} 
 
 HISTFIEL=$HOME/.zhistory
 SAVEHIST=1000
@@ -61,18 +63,3 @@ setopt share_history
 setopt hist_expire_dups_first
 setopt hist_ignore_dups
 setopt hist_verify
-
-mkcd() {
-    mkdir "$1" && cd "$1"
-} 
-
-
-
-
-# BEGIN opam configuration
-# This is useful if you're using opam as it adds:
-#   - the correct directories to the PATH
-#   - auto-completion for the opam binary
-# This section can be safely removed at any time if needed.
-[[ ! -r '/Users/valur/.opam/opam-init/init.zsh' ]] || source '/Users/valur/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
-# END opam configuration
