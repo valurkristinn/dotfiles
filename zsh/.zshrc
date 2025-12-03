@@ -50,6 +50,8 @@ alias dotfiles='sh ~/scripts/dotfiles.sh'
 alias schoolDir='cd ~/Library/CloudStorage/OneDrive-Menntaský'
 alias ls='eza --icons'
 alias of='open .'
+alias prevmd='python3 ~/scripts/prevmd.py'
+alias mv='mv -i'
 
 mkcd() {
     mkdir "$1" && cd "$1"
