@@ -52,6 +52,8 @@ alias ls='eza --icons'
 alias of='open .'
 alias prevmd='python3 ~/scripts/prevmd.py'
 alias mv='mv -i'
+alias mvrecent='find ~/Downloads/ -type f -mmin -5 -exec mv {} . \;'
+alias copy='xclip -selection clipboard'
 
 mkcd() {
     mkdir "$1" && cd "$1"
@@ -59,7 +61,7 @@ mkcd() {
 
 HISTFIEL=$HOME/.zhistory
 SAVEHIST=1000
-HISTSIZE=999
+HISTSIZE=9
 
 setopt share_history
 setopt hist_expire_dups_first

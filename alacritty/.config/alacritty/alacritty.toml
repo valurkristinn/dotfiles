@@ -7,6 +7,9 @@ padding.y = 15
 
 decorations = "Buttonless"
 
+option_as_alt = "OnlyLeft"
+
+
 [colors.primary]
 background = "#151515"
 # opacity = 0.85

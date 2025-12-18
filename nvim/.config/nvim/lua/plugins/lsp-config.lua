@@ -30,7 +30,14 @@ return {
 			vim.lsp.enable("pyright")
 			vim.lsp.enable("ts_ls")
 			vim.lsp.enable("bashls")
-			vim.lsp.enable("eslint")
+			vim.lsp.config("eslint", {
+				capabilities = capabilities,
+				settings = {
+					experimental = {
+						useFlatConfig = true
+					}
+				}
+			})
 			-- vim.lsp.enable("jdtls")
 
 			vim.keymap.set("n", "grd", vim.lsp.buf.definition, {})

@@ -8,11 +8,9 @@ vim.cmd([[
   set cursorline
   set cursorlineopt=number
   set noshowmode
-  set rtp^="/Users/valur/.opam/default/share/ocp-indent/vim"
   autocmd BufRead,BufNewFile   *.md setlocal wrap
 ]])
-local opt = vim.opt
-opt.wrap = false
+vim.opt.wrap = false
 vim.opt.clipboard = "unnamedplus"
 vim.opt.signcolumn = "yes:2"
 

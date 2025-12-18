@@ -6,22 +6,20 @@ return {
 
        
 
-        vim.keymap.set({ "n", "v", "i" }, "<C-u>", function()
+        vim.keymap.set({ "n", "v", "i" }, "<M-k>", function()
 			    scroll(-10, { move_cursor = true, duration = 100, easing = "sine" })
             end)
 
-        vim.keymap.set({ "n", "v", "i" }, "<C-d>", function()
+        vim.keymap.set({ "n", "v", "i" }, "<M-j>", function()
 			    scroll(10, { move_cursor = true, duration = 100, easing = "sine" })
             end)
 
-        vim.keymap.set({ "n", "v"},"]d", function()
+        vim.keymap.set({ "n", "v"},"<M-u>", function()
 			    scroll(-50, { move_cursor = true, duration = 100, easing = "sine" })
             end)
 
-        vim.keymap.set({ "n", "v"}, "[d", function()
+        vim.keymap.set({ "n", "v"}, "<M-d>", function()
 			    scroll(50, { move_cursor = true, duration = 100, easing = "sine" })
             end)
-
 	end,
 }
-
