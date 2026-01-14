@@ -47,13 +47,14 @@ alias git-graph="git log --all --graph --decorate --oneline"
 alias flush-dns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 alias ta='tmux attach'
 alias dotfiles='sh ~/scripts/dotfiles.sh'
-alias schoolDir='cd ~/Library/CloudStorage/OneDrive-Menntaský'
+alias schoolDir='cd ~/Documents/Vault/Skóli'
 alias ls='eza --icons'
 alias of='open .'
 alias prevmd='python3 ~/scripts/prevmd.py'
 alias mv='mv -i'
 alias mvrecent='find ~/Downloads/ -type f -mmin -5 -exec mv {} . \;'
 alias copy='xclip -selection clipboard'
+alias gerry='git add --all && git commit && git push'
 
 mkcd() {
     mkdir "$1" && cd "$1"

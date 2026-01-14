@@ -7,7 +7,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "clangd", "bashls", "eslint", "pyright", "ts_ls" },
+				ensure_installed = { "lua_ls", "clangd", "bashls", "eslint", "pyright", "ts_ls", "cssls" },
 			})
 		end,
 	},
@@ -15,7 +15,7 @@ return {
 		"neovim/nvim-lspconfig",
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-            vim.lsp.config.jdtls = { cmd = function() end, filetypes = {} }
+			vim.lsp.config.jdtls = { cmd = function() end, filetypes = {} }
 
 			vim.lsp.config("lua_ls", { capabilities = capabilities })
 			vim.lsp.config("clangd", { capabilities = capabilities })
@@ -23,6 +23,7 @@ return {
 			vim.lsp.config("ts_ls", { capabilities = capabilities })
 			vim.lsp.config("bashls", { capabilities = capabilities })
 			vim.lsp.config("eslint", { capabilities = capabilities })
+			vim.lsp.config("cssls", { capabilities = capabilities })
 			-- vim.lsp.config("jdtls", { capabilities = capabilities })
 
 			vim.lsp.enable("lua_ls")
@@ -34,10 +35,11 @@ return {
 				capabilities = capabilities,
 				settings = {
 					experimental = {
-						useFlatConfig = true
-					}
-				}
+						useFlatConfig = true,
+					},
+				},
 			})
+			vim.lsp.enable("cssls")
 			-- vim.lsp.enable("jdtls")
 
 			vim.keymap.set("n", "grd", vim.lsp.buf.definition, {})
