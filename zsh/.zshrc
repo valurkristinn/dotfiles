@@ -29,6 +29,9 @@ export PATH="/Users/valur/.ghcup/ghc/9.6.7/bin:$PATH"
 # Java classpath
 export CLASSPATH=".:$HOME/algs4/algs4.jar:$HOME/jdbc/sqlite-jdbc-3.43.0.0.jar"
 
+# Postgres sql
+export PATH="/opt/homebrew/opt/postgresql@18/bin:$PATH"
+
 # Prompt
 NEWLINE=$'\n'
 export PROMPT="%~ %{$(tput setaf 6)%}${NEWLINE}$ %{$(tput setaf 255)%}"
@@ -61,8 +64,9 @@ mkcd() {
 } 
 
 HISTFIEL=$HOME/.zhistory
-SAVEHIST=1000
-HISTSIZE=9
+SAVEHIST=10000
+HISTSIZE=10000
+HISTFILESIZE=10000
 
 setopt share_history
 setopt hist_expire_dups_first
