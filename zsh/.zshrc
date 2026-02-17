@@ -32,6 +32,9 @@ export CLASSPATH=".:$HOME/algs4/algs4.jar:$HOME/jdbc/sqlite-jdbc-3.43.0.0.jar"
 # Postgres sql
 export PATH="/opt/homebrew/opt/postgresql@18/bin:$PATH"
 
+# Man pager
+export MANPAGER='nvim +Man!'
+
 # Prompt
 NEWLINE=$'\n'
 export PROMPT="%~ %{$(tput setaf 6)%}${NEWLINE}$ %{$(tput setaf 255)%}"
@@ -55,7 +58,7 @@ alias ls='eza --icons'
 alias of='open .'
 alias prevmd='python3 ~/scripts/prevmd.py'
 alias mv='mv -i'
-alias mvrecent='find ~/Downloads/ -type f -mmin -5 -exec mv {} . \;'
+alias mvrecent='find ~/Downloads/ -type f -mmin -1 -exec mv {} . \;'
 alias copy='xclip -selection clipboard'
 alias gerry='git add --all && git commit && git push'
 
