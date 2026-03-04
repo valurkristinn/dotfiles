@@ -37,7 +37,7 @@ export MANPAGER='nvim +Man!'
 
 # Prompt
 NEWLINE=$'\n'
-export PROMPT="%~ %{$(tput setaf 6)%}${NEWLINE}$ %{$(tput setaf 255)%}"
+export PROMPT="%n@%m %~ %{$(tput setaf 6)%}${NEWLINE}$ %{$(tput setaf 255)%}"
 
 
 eval "$(pyenv init -)"
@@ -61,6 +61,12 @@ alias mv='mv -i'
 alias mvrecent='find ~/Downloads/ -type f -mmin -1 -exec mv {} . \;'
 alias copy='xclip -selection clipboard'
 alias gerry='git add --all && git commit && git push'
+alias proxmox='ssh root@100.86.109.99'
+
+# Sieve
+alias sieve-ls="sieve-connect --server mailserver.purelymail.com --user valur@valur.me --list < ~/.sievepass"
+alias sieve-pull="sieve-connect --server mailserver.purelymail.com --user valur@valur.me --download --remotesieve roundcube --localsieve filters.sieve < ~/.sievepass"
+alias sieve-push="sieve-connect --server mailserver.purelymail.com --user valur@valur.me --upload --localsieve filters.sieve --remotesieve roundcube < ~/.sievepass && sieve-connect --server mailserver.purelymail.com --user valur@valur.me --activate --remotesieve roundcube < ~/.sievepass"
 
 mkcd() {
     mkdir "$1" && cd "$1"
