@@ -8,7 +8,7 @@ return {
     dependencies = { "williamboman/mason.nvim" },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "clangd", "bashls", "eslint", "pyright", "ts_ls", "cssls" },
+        ensure_installed = { "lua_ls", "clangd", "bashls", "eslint", "pyright", "ts_ls", "cssls", "astro", "tinymist" },
       })
     end,
   },
@@ -27,6 +27,7 @@ return {
       vim.lsp.config("cssls", { capabilities = capabilities })
       -- vim.lsp.config("jdtls", { capabilities = capabilities })
       vim.lsp.config("astro", { capabilities = capabilities })
+      vim.lsp.config("tinymist", { capabilities = capabilities })
 
       vim.lsp.enable("lua_ls")
       vim.lsp.enable("clangd")
@@ -44,6 +45,7 @@ return {
       vim.lsp.enable("cssls")
       -- vim.lsp.enable("jdtls")
       vim.lsp.enable("astro")
+      vim.lsp.enable("tinymist")
 
       vim.keymap.set("n", "grd", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
