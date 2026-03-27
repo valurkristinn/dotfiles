@@ -8,7 +8,17 @@ return {
     dependencies = { "williamboman/mason.nvim" },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "clangd", "bashls", "eslint", "pyright", "ts_ls", "cssls", "astro", "tinymist" },
+        ensure_installed = {
+          "lua_ls",
+          "clangd",
+          "bashls",
+          "eslint",
+          "pyright",
+          "ts_ls",
+          "cssls",
+          "astro",
+          "tinymist",
+        },
       })
     end,
   },
@@ -16,24 +26,12 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
-      vim.lsp.config.jdtls = { cmd = function() end, filetypes = {} }
 
       vim.lsp.config("lua_ls", { capabilities = capabilities })
       vim.lsp.config("clangd", { capabilities = capabilities })
       vim.lsp.config("pyright", { capabilities = capabilities })
       vim.lsp.config("ts_ls", { capabilities = capabilities })
       vim.lsp.config("bashls", { capabilities = capabilities })
-      vim.lsp.config("eslint", { capabilities = capabilities })
-      vim.lsp.config("cssls", { capabilities = capabilities })
-      -- vim.lsp.config("jdtls", { capabilities = capabilities })
-      vim.lsp.config("astro", { capabilities = capabilities })
-      vim.lsp.config("tinymist", { capabilities = capabilities })
-
-      vim.lsp.enable("lua_ls")
-      vim.lsp.enable("clangd")
-      vim.lsp.enable("pyright")
-      vim.lsp.enable("ts_ls")
-      vim.lsp.enable("bashls")
       vim.lsp.config("eslint", {
         capabilities = capabilities,
         settings = {
@@ -42,18 +40,25 @@ return {
           },
         },
       })
+      vim.lsp.config("cssls", { capabilities = capabilities })
+      vim.lsp.config("astro", { capabilities = capabilities })
+      vim.lsp.config("tinymist", { capabilities = capabilities })
+
+      vim.lsp.enable("lua_ls")
+      vim.lsp.enable("clangd")
+      vim.lsp.enable("pyright")
+      vim.lsp.enable("ts_ls")
+      vim.lsp.enable("bashls")
+      vim.lsp.enable("eslint")
       vim.lsp.enable("cssls")
-      -- vim.lsp.enable("jdtls")
       vim.lsp.enable("astro")
       vim.lsp.enable("tinymist")
 
       vim.keymap.set("n", "grd", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
-
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, {})
       vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, {})
-
       vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, {})
       vim.keymap.set("n", "]d", vim.diagnostic.goto_next, {})
       vim.keymap.set("n", "<space>de", vim.diagnostic.open_float, {})
@@ -91,6 +96,9 @@ return {
             },
             root_dir = vim.fs.root(0, { ".git", "mvnw", "gradlew", "pom.xml", "build.gradle" }),
             capabilities = capabilities,
+            init_options = {
+              bundles = {},
+            },
           })
         end,
       })
