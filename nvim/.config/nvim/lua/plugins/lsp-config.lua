@@ -1,3 +1,14 @@
+local langs = {
+  "lua_ls",
+  "clangd",
+  "bashls",
+  "eslint",
+  "pyright",
+  "ts_ls",
+  "cssls",
+  "astro",
+  "tinymist",
+}
 return {
   {
     "williamboman/mason.nvim",
@@ -8,17 +19,7 @@ return {
     dependencies = { "williamboman/mason.nvim" },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = {
-          "lua_ls",
-          "clangd",
-          "bashls",
-          "eslint",
-          "pyright",
-          "ts_ls",
-          "cssls",
-          "astro",
-          "tinymist",
-        },
+        ensure_installed = langs,
       })
     end,
   },
@@ -27,11 +28,11 @@ return {
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-      vim.lsp.config("lua_ls", { capabilities = capabilities })
-      vim.lsp.config("clangd", { capabilities = capabilities })
-      vim.lsp.config("pyright", { capabilities = capabilities })
-      vim.lsp.config("ts_ls", { capabilities = capabilities })
-      vim.lsp.config("bashls", { capabilities = capabilities })
+      for _, l in ipairs(langs) do
+        vim.lsp.config(l, { capabilities = capabilities })
+        vim.lsp.enable(l)
+      end
+
       vim.lsp.config("eslint", {
         capabilities = capabilities,
         settings = {
@@ -40,19 +41,6 @@ return {
           },
         },
       })
-      vim.lsp.config("cssls", { capabilities = capabilities })
-      vim.lsp.config("astro", { capabilities = capabilities })
-      vim.lsp.config("tinymist", { capabilities = capabilities })
-
-      vim.lsp.enable("lua_ls")
-      vim.lsp.enable("clangd")
-      vim.lsp.enable("pyright")
-      vim.lsp.enable("ts_ls")
-      vim.lsp.enable("bashls")
-      vim.lsp.enable("eslint")
-      vim.lsp.enable("cssls")
-      vim.lsp.enable("astro")
-      vim.lsp.enable("tinymist")
 
       vim.keymap.set("n", "grd", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
