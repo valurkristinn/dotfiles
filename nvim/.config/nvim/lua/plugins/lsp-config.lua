@@ -2,9 +2,9 @@ local langs = {
   "lua_ls",
   "clangd",
   "bashls",
-  "eslint",
+  "oxlint",
   "pyright",
-  "ts_ls",
+  "vtsls",
   "cssls",
   "astro",
   "tinymist",
@@ -32,15 +32,6 @@ return {
         vim.lsp.config(l, { capabilities = capabilities })
         vim.lsp.enable(l)
       end
-
-      vim.lsp.config("eslint", {
-        capabilities = capabilities,
-        settings = {
-          experimental = {
-            useFlatConfig = true,
-          },
-        },
-      })
 
       vim.keymap.set("n", "grd", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
