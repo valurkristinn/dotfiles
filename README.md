@@ -16,4 +16,4 @@ example:
 stow nvim
 ```
 
-make sure all of these commands are ran from the root of the dotfiles dir
+make sure all of these commands are ran from the root of the dotfiles directory
