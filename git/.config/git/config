@@ -1,0 +1,24 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = valurkristinn
+	email = 109678364+valurkristinn@users.noreply.github.com
+[credential]
+	helper = manager
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[core]
+	editor = nvim
+[pager]
+	diff = diffnav
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[credential "https://github.com"]
+	username = valurkristinn
