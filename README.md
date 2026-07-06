@@ -6,14 +6,14 @@ brew install stow
 
 to use run 
 ```
-./stowAll
+stow */
 ```
 or if you only want the config for a specific program use `stow ...`
 
-example
+example:
 
 ```
 stow nvim
 ```
 
-make sure all of these commands are ran from the project root
+make sure all of these commands are ran from the root of the dotfiles directory

@@ -1,0 +1,25 @@
+{
+    "h1": {
+        "foreground": "#f5e0dc",
+        "bold": true,
+        "margin_top": 1,
+        "margin_bottom": 1
+    },
+    "h2": {
+        "foreground": "#cba6f7",
+        "bold": true,
+        "margin_top": 1
+    },
+    "h3": {
+        "foreground": "#89b4fa"
+    },
+    "h4": {
+        "foreground": "#a6e3a1"
+    },
+    "h5": {
+        "foreground": "#f9e2af"
+    },
+    "h6": {
+        "foreground": "#fab387"
+    }
+}

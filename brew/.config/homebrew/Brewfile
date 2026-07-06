@@ -1,0 +1,138 @@
+tap "asmvik/formulae"
+tap "dlvhdr/formulae"
+tap "epk/epk"
+tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae"
+tap "morpho-lang/morpho"
+tap "neur0map/tap"
+tap "nikitabobko/tap"
+tap "philpennock/protocols"
+tap "sikarugir-app/sikarugir", "https://github.com/Sikarugir-App/homebrew-sikarugir"
+tap "vldmrkl/formulae"
+# Run your GitHub Actions locally
+brew "act"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
+# TUI web browser with CSS, inline image and JavaScript support
+brew "chawan"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# Select default apps for documents and URL schemes on macOS
+brew "duti"
+# Run arbitrary commands when files change
+brew "entr"
+# Modern, maintained replacement for ls
+brew "eza"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Play, record, convert, and stream select audio and video codecs
+brew "ffmpeg"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GNU compiler collection
+brew "gcc"
+# GitHub command-line tool
+brew "gh"
+# Installer for the general purpose language Haskell
+brew "ghcup"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
+# Render markdown on the CLI
+brew "glow"
+# Cross-platform program for developing Haskell projects
+brew "haskell-stack"
+# Text-based UI library
+brew "ncurses"
+# Improved top (interactive process viewer)
+brew "htop"
+# Simple terminal UI for git commands
+brew "lazygit"
+# GNOME XML library
+brew "libxml2"
+# Next-gen compiler infrastructure
+brew "llvm"
+# Package manager for the Lua programming language
+brew "luarocks"
+# Java-based project management
+brew "maven"
+# Deep clean and optimize your Mac
+brew "mole"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
+# Cross platform, open source .NET development framework
+brew "mono"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# OCaml package manager
+brew "opam"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
+# Object-relational database system
+brew "postgresql@18"
+# Python version management
+brew "pyenv"
+# Command-line interface for qBittorrent written in Go
+brew "qbittorrent-cli"
+# Software environment for statistical computing
+brew "r"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
+# OCR (Optical Character Recognition) engine
+brew "tesseract"
+# Enables extra languages support for Tesseract
+brew "tesseract-lang"
+# Official tldr client written in Rust
+brew "tlrc"
+# Terminal multiplexer
+brew "tmux"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Markup-based typesetting system
+brew "typst"
+# Internet file retriever
+brew "wget"
+# Access X11 clipboards from the command-line
+brew "xclip"
+# JavaScript package manager
+brew "yarn"
+# Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-autosuggestions"
+# AeroSpace is an i3-like tiling window manager for macOS
+cask "nikitabobko/tap/aerospace"
+# GPU-accelerated terminal emulator
+cask "alacritty"
+# Always on top window preview
+cask "amitv87-pip"
+# Distribution of the Python and R programming languages for scientific computing
+cask "anaconda"
+# Browser for SQLite databases
+cask "db-browser-for-sqlite"
+cask "font-roboto-mono"
+cask "font-roboto-mono-nerd-font"
+cask "epk/epk/font-sf-mono-nerd-font"
+cask "font-sf-mono-nerd-font-ligaturized"
+# Cross-platform Git credential storage for multiple hosting providers
+cask "git-credential-manager"
+# Tool to prevent the system from going into sleep mode
+cask "keepingyouawake"
+# Finder Toolbar app to open the current directory in Terminal or Editor
+cask "openinterminal"
+# Colour picker for colours onscreen
+cask "pika"
+# Font manager that helps preview, install, sync and manage fonts
+cask "rightfont"
+# App that enables mouse-free UI interaction
+cask "shortcat"
+# Porting tool, to make Windows programs/games into native apps
+cask "sikarugir-app/sikarugir/sikarugir"
+# PDF viewer designed for reading research papers and technical books
+cask "sioyek"
+npm "corepack"
+npm "surge"

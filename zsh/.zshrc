@@ -32,15 +32,16 @@ export CLASSPATH=".:$HOME/algs4/algs4.jar:$HOME/jdbc/sqlite-jdbc-3.43.0.0.jar"
 # Postgres sql
 export PATH="/opt/homebrew/opt/postgresql@18/bin:$PATH"
 
-# Man pager
-export MANPAGER='nvim +Man!'
+export XDG_CONFIG_HOME="$HOME/.config"
 
-# Prompt
 NEWLINE=$'\n'
 export PROMPT="%n@%m %~ %{$(tput setaf 6)%}${NEWLINE}$ %{$(tput setaf 255)%}"
 
 autoload -Uz compinit
 compinit
+export MANPAGER='nvim +Man!'
+export EDITOR='nvim'
+
 eval "$(pyenv init -)"
 eval "$(fzf --zsh)"
 
