@@ -39,7 +39,8 @@ export MANPAGER='nvim +Man!'
 NEWLINE=$'\n'
 export PROMPT="%n@%m %~ %{$(tput setaf 6)%}${NEWLINE}$ %{$(tput setaf 255)%}"
 
-
+autoload -Uz compinit
+compinit
 eval "$(pyenv init -)"
 eval "$(fzf --zsh)"
 

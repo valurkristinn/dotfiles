@@ -29,7 +29,17 @@ return {
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       for _, l in ipairs(langs) do
-        vim.lsp.config(l, { capabilities = capabilities })
+        if l == "vtsls" then
+          vim.lsp.config(l, {
+            capabilities = capabilities,
+            on_attach = function(client)
+              client.server_capabilities.documentFormattingProvider = false
+              client.server_capabilities.documentRangeFormattingProvider = false
+            end,
+          })
+        else
+          vim.lsp.config(l, { capabilities = capabilities })
+        end
         vim.lsp.enable(l)
       end
 
