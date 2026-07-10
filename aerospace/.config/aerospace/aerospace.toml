@@ -51,7 +51,7 @@ automatically-unhide-macos-hidden-apps = true
 # even when they are invisible.
 # This config version is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
-persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9","G"]
+persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8","G"]
 
 # A callback that runs every time binding mode changes
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -74,10 +74,17 @@ on-mode-changed = []
 [gaps]
     inner.horizontal = 3
     inner.vertical =   3
-    outer.left =       8
-    outer.bottom =     8
-    outer.top =        3
-    outer.right =      8
+    outer.left =       3
+    outer.bottom =     3
+    outer.top =        [{ monitor."^Built-in Retina Display$" = 3 }, 40]
+    outer.right =      3
+
+[workspace-to-monitor-force-assignment]
+    1 = '^LEN P27q-10$'
+    8 = '^Built-in Retina Display$'
+    5 = '^LEN P27h-10$'
+    6 = '^LEN P27h-10$'
+    7 = '^LEN P27h-10$'
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -133,27 +140,25 @@ on-mode-changed = []
     alt-equal = 'resize smart +50'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-    alt-1 = 'workspace 1'
-    alt-2 = 'workspace 2'
-    alt-3 = 'workspace 3'
-    alt-4 = 'workspace 4'
-    alt-5 = 'workspace 5'
-    alt-6 = 'workspace 6'
-    alt-7 = 'workspace 7'
-    alt-8 = 'workspace 8'
-    alt-9 = 'workspace 9'
+    alt-q = 'workspace 1'
+    alt-w = 'workspace 2'
+    alt-e = 'workspace 3'
+    alt-r = 'workspace 4'
+    alt-a = 'workspace 5'
+    alt-s = 'workspace 6'
+    alt-d = 'workspace 7'
+    alt-f = 'workspace 8'
     alt-g = 'workspace G'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-    alt-shift-1 = 'move-node-to-workspace 1'
-    alt-shift-2 = 'move-node-to-workspace 2'
-    alt-shift-3 = 'move-node-to-workspace 3'
-    alt-shift-4 = 'move-node-to-workspace 4'
-    alt-shift-5 = 'move-node-to-workspace 5'
-    alt-shift-6 = 'move-node-to-workspace 6'
-    alt-shift-7 = 'move-node-to-workspace 7'
-    alt-shift-8 = 'move-node-to-workspace 8'
-    alt-shift-9 = 'move-node-to-workspace 9'
+    alt-shift-q = 'move-node-to-workspace 1'
+    alt-shift-w = 'move-node-to-workspace 2'
+    alt-shift-e = 'move-node-to-workspace 3'
+    alt-shift-r = 'move-node-to-workspace 4'
+    alt-shift-a = 'move-node-to-workspace 5'
+    alt-shift-s = 'move-node-to-workspace 6'
+    alt-shift-d = 'move-node-to-workspace 7'
+    alt-shift-f = 'move-node-to-workspace 8'
     alt-shift-g = 'move-node-to-workspace G'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
@@ -166,7 +171,6 @@ on-mode-changed = []
 
 
 
-    alt-f = 'fullscreen'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes

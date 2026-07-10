@@ -1,0 +1,10 @@
+{
+  "trustedcasks": [
+    "epk/epk/font-sf-mono-nerd-font",
+    "nikitabobko/tap/aerospace",
+    "sikarugir-app/sikarugir/sikarugir"
+  ],
+  "trustedformulae": [
+    "felixkratz/formulae/sketchybar"
+  ]
+}
