@@ -24,19 +24,19 @@ vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "quit" })
 -- vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 vim.api.nvim_create_autocmd({ "BufEnter", "BufNewFile", "BufRead" }, {
-  pattern = { "*.md", "*.typ" },
-  command = "setlocal wrap | setlocal linebreak",
+	pattern = { "*.md", "*.typ" },
+	command = "setlocal wrap | setlocal linebreak",
 })
 
 -- start screen
 vim.api.nvim_create_autocmd("BufEnter", {
-  callback = function()
-    if vim.api.nvim_buf_get_name(0) == "" and vim.bo.buftype == "" then
-      vim.keymap.set("n", "u", ":Lazy update<CR>", { buffer = true })
-      vim.keymap.set("n", "e", ":Neotree filesystem toggle current<cr>", { buffer = true })
-      vim.keymap.set("n", "f", function()
-        require("telescope.builtin").find_files()
-      end, { buffer = true })
-    end
-  end,
+	callback = function()
+		if vim.api.nvim_buf_get_name(0) == "" and vim.bo.buftype == "" then
+			vim.keymap.set("n", "u", ":Lazy update<CR>", { buffer = true })
+			vim.keymap.set("n", "e", ":Neotree filesystem toggle current<cr>", { buffer = true })
+			vim.keymap.set("n", "f", function()
+				require("telescope.builtin").find_files()
+			end, { buffer = true })
+		end
+	end,
 })
