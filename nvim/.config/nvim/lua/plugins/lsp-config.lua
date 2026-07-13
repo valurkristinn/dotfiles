@@ -9,6 +9,12 @@ local langs = {
   "astro",
   "tinymist",
 }
+
+local formatters = {
+  "stylua",
+  "prettier",
+}
+
 return {
   {
     "williamboman/mason.nvim",
@@ -19,7 +25,7 @@ return {
     dependencies = { "williamboman/mason.nvim" },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = langs,
+        ensure_installed = extend(langs, formatters),
       })
     end,
   },
