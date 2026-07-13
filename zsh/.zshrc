@@ -51,18 +51,16 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 
 
-alias git-graph="git log --all --graph --decorate --oneline"
+alias glog="git log | nvim -MR"
 alias flush-dns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 alias ta='tmux attach'
 alias dotfiles='sh ~/scripts/dotfiles.sh'
 alias schoolDir='cd ~/Documents/Vault/Skóli'
 alias ls='eza --icons'
-alias of='open .'
 alias prevmd='python3 ~/scripts/prevmd.py'
 alias mv='mv -i'
 alias mvrecent='find ~/Downloads/ -type f -mmin -5 -exec mv {} . \;'
-alias copy='xclip -selection clipboard'
-alias gerry='git add --all && git commit && git push'
+alias gerry='git add . && git commit && git push'
 alias proxmox='ssh root@100.86.109.99'
 
 # Sieve
