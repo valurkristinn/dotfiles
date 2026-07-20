@@ -63,7 +63,6 @@ alias mv='mv -i'
 alias mvrecent='find ~/Downloads/ -type f -mmin -5 -exec mv {} . \;'
 alias copy='xclip -selection clipboard'
 alias gerry='git add --all && git commit && git push'
-alias proxmox='ssh root@100.86.109.99'
 
 # Sieve
 alias sieve-ls="sieve-connect --server mailserver.purelymail.com --user valur@valur.me --list < ~/.sievepass"
