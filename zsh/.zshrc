@@ -49,8 +49,6 @@ bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-
-
 alias glog="git log | nvim -MR"
 alias flush-dns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 alias ta='tmux attach'
@@ -60,8 +58,8 @@ alias ls='eza --icons'
 alias prevmd='python3 ~/scripts/prevmd.py'
 alias mv='mv -i'
 alias mvrecent='find ~/Downloads/ -type f -mmin -5 -exec mv {} . \;'
+alias copy='xclip -selection clipboard'
 alias gerry='git add . && git commit && git push'
-alias proxmox='ssh root@100.86.109.99'
 
 # Sieve
 alias sieve-ls="sieve-connect --server mailserver.purelymail.com --user valur@valur.me --list < ~/.sievepass"
