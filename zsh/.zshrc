@@ -58,7 +58,6 @@ alias ls='eza --icons'
 alias prevmd='python3 ~/scripts/prevmd.py'
 alias mv='mv -i'
 alias mvrecent='find ~/Downloads/ -type f -mmin -5 -exec mv {} . \;'
-alias copy='xclip -selection clipboard'
 alias gerry='git add . && git commit && git push'
 
 # Sieve
