@@ -13,7 +13,11 @@
 [core]
 	editor = nvim
 [pager]
-	diff = diffnav
+  diff = diffnav 
+[include]
+	path = ~/.config/delta/catppuccin.gitconfig
+[delta]
+  features = catppuccin-mocha
 [init]
 	defaultBranch = main
 [pull]
