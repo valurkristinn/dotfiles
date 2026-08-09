@@ -8,6 +8,7 @@ vim.cmd([[
   set cursorline
   set cursorlineopt=number
   set noshowmode
+  colorscheme zenbones
 ]])
 vim.opt.wrap = false
 vim.opt.clipboard = "unnamedplus"
