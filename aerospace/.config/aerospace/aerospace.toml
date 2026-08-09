@@ -193,7 +193,13 @@ on-mode-changed = []
 if.app-id = 'app.zen-browser.zen'
 run = 'move-node-to-workspace 2'
 
+if.app-id = 'com.autodesk.fusion360'
+run = 'move-node-to-workspace 3'
+
+if.app-id = 'org.kicad.kicad'
+run = 'move-node-to-workspace 4'
+
 [[on-window-detected]]
-if.app-name-regex-substring = '(?i)wine|steam|minecraft'
+if.app-name-regex-substring = '(?i)wine|steam|minecraft|java'
 run = 'move-node-to-workspace G'
 
