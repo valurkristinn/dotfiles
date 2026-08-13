@@ -1,13 +1,15 @@
 #!/bin/sh
 
-FOCUSED="$(aerospace list-workspaces --focused)"
-ALL_WS="$(aerospace list-workspaces --all)"
+AEROSPACE=/opt/homebrew/bin/aerospace
+
+FOCUSED="$($AEROSPACE list-workspaces --focused)"
+ALL_WS="$($AEROSPACE list-workspaces --all)"
 TMPD="$(mktemp -d)"
 trap 'rm -rf "$TMPD"' EXIT INT TERM
 
 # Fire all window queries in parallel
 for w in $ALL_WS; do
-    aerospace list-windows --workspace "$w" > "$TMPD/$w" 2>/dev/null &
+    $AEROSPACE list-windows --workspace "$w" > "$TMPD/$w" 2>/dev/null &
 done
 wait
 
