@@ -3,13 +3,13 @@ return {
 	dependencies = { "rktjmp/lush.nvim" },
 	priority = 1000,
 	config = function()
-		vim.g.rosebones_transparent_background = true
+		vim.g.forestbones_transparent_background = true
 
 		vim.api.nvim_create_autocmd("ColorScheme", {
-			pattern = "rosebones",
+			pattern = "forestbones",
 			callback = function()
 				local lush = require("lush")
-				local base = require("rosebones")
+				local base = require("forestbones")
 				local specs = lush.parse(function()
 					return {
 						StatusLine({ base.StatusLine, bg = "NONE" }),
