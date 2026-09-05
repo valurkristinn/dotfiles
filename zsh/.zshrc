@@ -69,6 +69,26 @@ mkcd() {
     mkdir "$1" && cd "$1"
 } 
 
+temppdf() {
+    dir=~/valur/temp
+    mkdir -p "$dir"
+    file="$dir/temp.pdf"
+
+    latest=$(command ls -t ~/Downloads | head -n 1)
+
+    printf "Move '%s' to temp.pdf? [y/N] " "$latest"
+    read confirm
+    [ "$confirm" = "y" ] || [ "$confirm" = "Y" ] || return 1
+
+    mv ~/Downloads/"$latest" "$file"
+    sioyek "$file"
+    rm -f "$file"
+}
+
+render() {
+    quarto render "$1" --to typst
+}
+
 HISTFIEL=$HOME/.zhistory
 SAVEHIST=10000
 HISTSIZE=10000
@@ -79,3 +99,7 @@ setopt hist_expire_dups_first
 setopt hist_ignore_dups
 setopt hist_verify
 export LC_ALL=en_US.UTF-8
+# Add quarto to the path
+if [[ -d /Users/valur/Applications/quarto/bin ]]; then
+  export PATH="/Users/valur/Applications/quarto/bin:$PATH"
+fi

@@ -5,6 +5,8 @@
     "sikarugir-app/sikarugir/sikarugir"
   ],
   "trustedformulae": [
-    "felixkratz/formulae/sketchybar"
+    "dlvhdr/formulae/diffnav",
+    "felixkratz/formulae/sketchybar",
+    "neur0map/tap/gpk"
   ]
 }
