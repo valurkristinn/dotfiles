@@ -1,4 +1,8 @@
-require("config.lazy")
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
+require("config.pack")
+require("config.lsp")
 
 vim.cmd([[
   set tabstop=2
@@ -33,7 +37,7 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufNewFile", "BufRead" }, {
 vim.api.nvim_create_autocmd("BufEnter", {
 	callback = function()
 		if vim.api.nvim_buf_get_name(0) == "" and vim.bo.buftype == "" then
-			vim.keymap.set("n", "u", ":Lazy update<CR>", { buffer = true })
+			vim.keymap.set("n", "u", vim.pack.update, { buffer = true })
 			vim.keymap.set("n", "e", ":Neotree filesystem toggle current<cr>", { buffer = true })
 			vim.keymap.set("n", "f", function()
 				require("telescope.builtin").find_files()
