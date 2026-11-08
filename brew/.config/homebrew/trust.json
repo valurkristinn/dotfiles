@@ -8,5 +8,8 @@
     "dlvhdr/formulae/diffnav",
     "felixkratz/formulae/sketchybar",
     "neur0map/tap/gpk"
+  ],
+  "trustedtaps": [
+    "shaunsingh/sfmono-nerd-font-ligaturized"
   ]
 }
