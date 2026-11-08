@@ -7,24 +7,19 @@
 	name = valurkristinn
 	email = 109678364+valurkristinn@users.noreply.github.com
 [credential]
-	helper = manager
 	helper = 
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [core]
 	editor = nvim
 [pager]
   diff = diffnav 
-[include]
-	path = ~/.config/delta/catppuccin.gitconfig
-[delta]
-  features = catppuccin-mocha
 [init]
 	defaultBranch = main
 [pull]
 	rebase = false
 [credential "https://github.com"]
 	username = valurkristinn
-[credential "https://dev.azure.com"]
-	useHttpPath = true
 [push]
 	autoSetupRemote = true
+[credential "https://dev.azure.com"]
+	useHttpPath = true
