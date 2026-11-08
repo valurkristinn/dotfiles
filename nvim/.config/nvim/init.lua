@@ -20,6 +20,7 @@ vim.cmd([[
   set nowrap
   set clipboard=unnamedplus
   set signcolumn=yes:2
+  set termguicolors
   colorscheme zenburned
 ]])
 
@@ -27,7 +28,7 @@ require("config.statusline")
 
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "next buffer" })
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "previous buffer" })
-vim.keymap.set("n", "<leader>bc", ":bunload<CR>", { desc = "unload buffer" })
+vim.keymap.set("n", "<leader>bd", ":bdelete<CR>", { desc = "delete buffer" })
 vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "write" })
 vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "quit" })
 

@@ -59,6 +59,7 @@ alias prevmd='python3 ~/scripts/prevmd.py'
 alias mv='mv -i'
 alias mvrecent='find ~/Downloads/ -type f -mmin -5 -exec mv {} . \;'
 alias gerry='git add . && git commit && git push'
+alias prdiff='gh pr list | fzf | cut -f1 | xargs gh pr diff | diffnav'
 
 # Sieve
 alias sieve-ls="sieve-connect --server mailserver.purelymail.com --user valur@valur.me --list < ~/.sievepass"
@@ -89,7 +90,7 @@ render() {
     quarto render "$1" --to typst
 }
 
-HISTFIEL=$HOME/.zhistory
+HISTFILE=$HOME/.zhistory
 SAVEHIST=10000
 HISTSIZE=10000
 HISTFILESIZE=10000
